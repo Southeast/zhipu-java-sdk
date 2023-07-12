@@ -1,10 +1,12 @@
 com/zhipu/oapi/service/v2/ChatGlm6BReq$QA.class
 com/zhipu/oapi/service/v3/ModelApiRequest$Prompt.class
 com/zhipu/oapi/Client.class
+okhttp3/internal/sse/ServerSentEventReader$Callback.class
 com/zhipu/oapi/core/cache/LocalCache$1.class
 com/zhipu/oapi/demo/V3OkHttpClientTest.class
 com/zhipu/oapi/core/httpclient/IHttpTransport.class
 com/zhipu/oapi/service/v3/StandardEventSourceListener.class
+okhttp3/internal/sse/ServerSentEventReader.class
 com/zhipu/oapi/ClientV3$Builder.class
 com/zhipu/oapi/demo/V2OkHttpClientTest.class
 com/zhipu/oapi/demo/TestConstants.class
@@ -16,6 +18,7 @@ com/zhipu/oapi/service/v3/ModelApiRequest.class
 com/zhipu/oapi/core/cache/LocalCache$Value.class
 com/zhipu/oapi/utils/PrintStringDiff.class
 com/zhipu/oapi/service/v3/QueryModelResultRequest.class
+com/zhipu/oapi/service/v3/SseMeta.class
 com/zhipu/oapi/core/httpclient/ApacheHttpClientTransport.class
 com/zhipu/oapi/core/Config.class
 com/zhipu/oapi/utils/OkHttps.class
@@ -28,10 +31,11 @@ com/zhipu/oapi/Constants.class
 com/zhipu/oapi/utils/StringUtils$KvWrapper.class
 com/zhipu/oapi/core/token/GlobalTokenManager.class
 com/zhipu/oapi/service/v3/ModelConstants.class
-com/zhipu/oapi/service/v3/StandardEventSourceListener$EventStatus.class
+okhttp3/internal/sse/RealEventSource.class
 com/zhipu/oapi/utils/HttpUtilClient.class
 com/zhipu/oapi/core/cache/LocalCache$Inner.class
 com/zhipu/oapi/service/v3/ModelData.class
+okhttp3/sse/EventSourceListener.class
 com/zhipu/oapi/core/cache/ICache.class
 com/zhipu/oapi/core/request/RawRequest.class
 com/zhipu/oapi/service/v3/Usage.class
@@ -45,7 +49,6 @@ com/zhipu/oapi/service/v2/QueryRequestTaskResultResponse$QueryRequestTaskResultD
 com/zhipu/oapi/service/v3/ModelApiResponse.class
 com/zhipu/oapi/core/token/TokenManager.class
 com/zhipu/oapi/Client$Builder.class
-com/zhipu/oapi/service/v3/StandardEventSourceListener$1.class
 com/zhipu/oapi/service/v3/ModelEventSourceListener.class
 com/zhipu/oapi/core/httpclient/BaseHttpTransport.class
 com/zhipu/oapi/service/v2/ChatGlm6BResp.class

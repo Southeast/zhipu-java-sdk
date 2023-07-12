@@ -63,4 +63,5 @@ public class Usage {
     public void setTotalChars(int totalChars) {
         this.totalChars = totalChars;
     }
+
 }

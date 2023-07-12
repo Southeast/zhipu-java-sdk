@@ -1,5 +1,6 @@
 package com.zhipu.oapi.demo;
 
+import com.google.gson.Gson;
 import com.zhipu.oapi.ClientV3;
 import com.zhipu.oapi.Constants;
 import com.zhipu.oapi.service.v3.*;
@@ -10,8 +11,9 @@ import java.util.concurrent.CountDownLatch;
 
 public class V3OkHttpClientTest {
 
-    private static ClientV3 client = new ClientV3.Builder(TestConstants.testKeyV3, TestConstants.testSecretV3)
-            .devMode(true)
+    // 请先填写自己的apiKey再调用demo查看效果
+    private static ClientV3 client = new ClientV3.Builder(TestConstants.onlineKeyV3, TestConstants.onlineSecretV3)
+            //.devMode(true)
             .build();
     // 请自定义自己的业务id
     private static final String requestIdTemplate = "mycompany-%d";
@@ -98,6 +100,10 @@ public class V3OkHttpClientTest {
         System.out.println(String.format("invoke api code: %d", sseModelApiResp.getCode()));
         System.out.println("model output:");
         System.out.println(sseModelApiResp.getData().getChoices().get(0).getContent());
+        System.out.println("usage:");
+        String usage = new Gson().toJson(sseModelApiResp.getData().getUsage(), Usage.class);
+        System.out.println(usage);
+        System.out.println("task_id: " + sseModelApiResp.getData().getTaskId());
     }
 
     private static ModelApiRequest asyncRequest() {

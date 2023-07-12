@@ -10,8 +10,8 @@ public class ModelApiRequest {
 
     // 模型控制参数，提供默认值
     // 如果您想自定义请务必先了解参数说明
-    private float temperature = 0.95f;
-    private float topP = 0.75f;
+    private float temperature = 0.9f;
+    private float topP = 0.7f;
 
     // 给模型的输入，用户输入的内容role=user
     // 如果要带历史会话，模型生成的内容role=assistant

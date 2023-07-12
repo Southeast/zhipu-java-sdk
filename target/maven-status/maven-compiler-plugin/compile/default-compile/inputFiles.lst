@@ -1,6 +1,7 @@
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v3/ModelApiRequest.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/core/httpclient/IHttpTransport.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/core/request/RawRequest.java
+/Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v3/SseMeta.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v3/ModelConstants.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/core/Config.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/utils/OkHttps.java
@@ -22,7 +23,9 @@
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/demo/V2OkHttpClientTest.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/core/response/RawResponse.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/core/ConfigV3.java
+/Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/okhttp3/sse/EventSourceListener.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v2/ChatGlm6BReq.java
+/Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/okhttp3/internal/sse/RealEventSource.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/Client.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v2/ChatGlm6BResp.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/ClientV3.java
@@ -38,5 +41,6 @@
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v2/QueryRequestTaskResultResponse.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v3/QueryModelResultResponse.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/v3/Choice.java
+/Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/okhttp3/internal/sse/ServerSentEventReader.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/service/TaskStatus.java
 /Users/wangxiaodong/repo/github/wangxiaodong/zhipu-java-sdk/src/main/java/com/zhipu/oapi/demo/V3OkHttpClientTest.java

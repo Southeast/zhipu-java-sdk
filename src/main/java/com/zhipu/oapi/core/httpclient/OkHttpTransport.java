@@ -8,6 +8,7 @@ import com.zhipu.oapi.service.TaskStatus;
 import com.zhipu.oapi.service.v3.Choice;
 import com.zhipu.oapi.service.v3.ModelApiResponse;
 import com.zhipu.oapi.service.v3.ModelConstants;
+import com.zhipu.oapi.service.v3.SseMeta;
 import okhttp3.*;
 import okhttp3.internal.sse.RealEventSource;
 
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 
 public class OkHttpTransport extends BaseHttpTransport {
 
@@ -92,6 +94,8 @@ public class OkHttpTransport extends BaseHttpTransport {
                 .build();
         RealEventSource eventSource = new RealEventSource(okHttpReq, request.getSseListener());
         eventSource.connect(okHttpClient);
+        CountDownLatch countDownLatch=request.getSseListener().getCountDownLatch();
+        countDownLatch.await();
         // get result
         String output = request.getSseListener().getOutputText();
         RawResponse resp = new RawResponse();
@@ -102,7 +106,15 @@ public class OkHttpTransport extends BaseHttpTransport {
         List<Choice> choices = new ArrayList<>();
         choices.add(choice);
         data.put("choices", choices);
-        data.put("taskStatus", TaskStatus.SUCCESS);
+        data.put("task_status", TaskStatus.SUCCESS);
+        // get meta
+        SseMeta meta = request.getSseListener().getMeta();
+        if (meta != null) {
+            data.put("request_id", meta.getRequestId());
+            data.put("task_id", meta.getTaskId());
+            data.put("usage", meta.getUsage());
+        }
+
         resp.setBody(new Gson().toJson(data));
         return resp;
     }

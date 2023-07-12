@@ -11,7 +11,7 @@ public class ConfigV3 {
     // api credentials
     // apiSecretKey = {apiKey}.{apiSecret}
     private String apiSecretKey;
-    private String apiKey;
+    private String apiKey="3e19ab475b83623745c3b142b47d4dba.QTfN9TJHQ0yX87fC";
     private String apiSecret;
 
     // jwt config

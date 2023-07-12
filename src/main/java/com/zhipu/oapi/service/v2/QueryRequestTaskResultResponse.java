@@ -7,7 +7,7 @@ public class QueryRequestTaskResultResponse {
     private int code;
     private String msg;
     private boolean success;
-    private QueryRequestTaskResultResponse.QueryRequestTaskResultData data;
+    private QueryRequestTaskResultData data;
 
     public int getCode() {
         return code;

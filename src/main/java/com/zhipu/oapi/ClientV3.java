@@ -133,8 +133,10 @@ public class ClientV3 {
         paramsMap.put("temperature", request.getTemperature());
         paramsMap.put("top_p", request.getTopP());
 
-        // sseformat, 用于兼容解决sse增量模式okhttpsse截取data:后面空格问题, [data: hello]。
-        paramsMap.put("sseFormat", ModelConstants.sseFormat);
+        // sseformat, 用于兼容解决sse增量模式okhttpsse截取data:后面空格问题, [data: hello]。只在增量模式下使用sseFormat。
+        if (request.isIncremental()) {
+            paramsMap.put("sseFormat", ModelConstants.sseFormat);
+        }
         rawReq.setBody(paramsMap);
 
 
@@ -200,28 +202,28 @@ public class ClientV3 {
             config.setDisableTokenCache(false);
         }
 
-        public ClientV3.Builder disableTokenCache() {
+        public Builder disableTokenCache() {
             config.setDisableTokenCache(true);
             return this;
         }
 
 
-        public ClientV3.Builder tokenCache(ICache cache) {
+        public Builder tokenCache(ICache cache) {
             config.setCache(cache);
             return this;
         }
 
-        public ClientV3.Builder tokenExpire(int expireMillis) {
+        public Builder tokenExpire(int expireMillis) {
             config.setExpireMillis(expireMillis);
             return this;
         }
 
-        public ClientV3.Builder httpTransport(IHttpTransport httpTransport) {
+        public Builder httpTransport(IHttpTransport httpTransport) {
             config.setHttpTransport(httpTransport);
             return this;
         }
 
-        public ClientV3.Builder devMode(boolean devMode) {
+        public Builder devMode(boolean devMode) {
             config.setDevMode(devMode);
             return this;
         }
